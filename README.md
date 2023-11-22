@@ -2,7 +2,7 @@
 
 ## Flora Dispatch: A Plant-Delivery System
 
-Embark on a botanical adventure with Flora Dispatch, where our commitment to an immersive plant-shopping experience is woven into every aspect of our platform. Our home page serves as the gateway to a world of greenery, adorned with an aesthetically pleasing design and interactive features, including versatile viewing modes such as light and dark themes.
+Embark on a botanical adventure with Flora Dispatch, where our commitment to an immersive plant-shopping experience is woven into every aspect of our platform. Our home page serves as the gateway to a world of greenery, adorned with an aesthetically pleasing design and interactive features, including versatile viewing modes such as light and dark themes. Flora Dispatch goes beyond mere plant delivery; it offers an immersive and delightful shopping experience, inviting you to cultivate a greener world—one plant at a time.
 
 ## Home Page
 
