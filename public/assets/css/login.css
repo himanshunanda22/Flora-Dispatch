@@ -1,0 +1,142 @@
+/* login.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Import color variables from the theme file */
+@import url('./styles.css');
+
+/* Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--first-color-dark); /* Use dark background color */
+  color: var(--text-color);
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* .container-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%; 
+  margin: 2rem;
+  padding: 2rem;
+  background-color: var(--first-color-lighten);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} 
+*/
+
+.container-column {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem;
+  margin-right: 2rem;
+  padding: 2rem;
+  background-color: var(--first-color-lighten);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color-light);
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--text-color-light);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: var(--font-medium);
+  transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: var(--first-color-alt);
+}
+
+@media screen and (max-width: 768px) {
+  .container-column {
+    flex-direction: column;
+  }
+
+  .right-image {
+    width: 100%;
+    margin-left: 10; 
+  }
+}
+
+.social-login {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.social-login p {
+  margin-bottom: 0.5rem;
+}
+
+.social-login img {
+  width: auto;
+  margin: 0 0.5rem;
+}
+
+.right-image img {
+  max-width: 1000px;
+  width: 100%;
+  margin: 2rem;
+  margin-right: 2rem;
+  padding: 2rem;
+  background-color: var(--first-color-lighten);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.right-image-s{
+  max-width: 1000px;
+  width: 100%;
+  margin: 2rem;
+  margin-right: 2rem;
+  padding: 2rem;
+  background-color: var(--first-color-lighten);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

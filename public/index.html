@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+    <title>Flora Dispatch</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 style="color: var(--first-color)">
+        <img
+          src="./assets/img/favicon.png"
+          alt="icon logo"
+          style="color: var(--first-color)" />
+        Flora
+      </h1>
+      <h1 style="color: var(--first-color)">Dispatch</h1>
+      <br />
+      <h2 style="color: var(--first-color)">Login</h2>
+      <form id="loginForm">
+        <label style="color: var(--first-color)" for="username"
+          >Username:</label
+        >
+        <input type="text" id="username" name="username" required />
+
+        <label style="color: var(--first-color)" for="password"
+          >Password:</label
+        >
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Login</button>
+
+        <div class="social-login">
+          <p>Or log in with:</p>
+          <img
+            src="./assets/img/google.png"
+            alt="Google Logo"
+            onclick="loginWithGoogle()" />
+          <img
+            src="./assets/img/facebook.png"
+            alt="Facebook Logo"
+            onclick="loginWithFacebook()" />
+          <img
+            src="./assets/img/instagram.png"
+            alt="Instagram Logo"
+            onclick="loginWithInstagram()" />
+          <p>New to Flora Dispatch? <a href="signup.html">Sign Up</a></p>
+        </div>
+      </form>
+    </div>
+    <div class="right-image">
+      <img src="./assets/img/right.jpg" alt="Right Image" />
+    </div>
+    <script src="assets/js/login.js"></script>
+    <script>
+      function loginWithGoogle() {
+        alert("Logging in with Google");
+      }
+
+      function loginWithFacebook() {
+        alert("Logging in with Facebook");
+      }
+
+      function loginWithInstagram() {
+        alert("Logging in with Instagram");
+      }
+    </script>
+  </body>
+</html>
