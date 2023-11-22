@@ -1,0 +1,279 @@
+/* checkout.css */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Import color variables from the theme file */
+@import url('./styles.css');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4; /* Light background color */
+}
+
+.container {
+  max-width: 600px;
+  width: 85%;
+  padding: 2rem;
+  background-color: var(--first-color-lighten); /* White background */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--first-color); /* Your theme's primary color */
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-container,
+.map-container {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+.user-details,
+.payment-details,
+.card-image-container {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  color: var(--first-color); /* Your theme's primary color */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px;
+  background-color: #f5f5f5; /* Lighter gray background */
+}
+
+button {
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.card-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.card-image {
+  width: 40px;
+  height: auto;
+  margin: 0 8px; 
+}
+
+/* Additional styling for an elegant look */
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1.5rem;
+}
+
+.payment-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-panel {
+  width: 300px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Light gray background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden by default */
+}
+
+.cart-item-list {
+  list-style: none;
+  padding: 0;
+}
+
+#cartTitle {
+  text-align: center;
+  color: var(--first-color); /* Your theme's primary color */
+}
+
+.cart-panel button {
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.cart-panel button:hover {
+  background-color: var(--first-color-alt);
+}
+
+
+.cart-container {
+  position: relative;
+}
+
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Start with the panel outside the viewport */
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.cart-panel.open {
+  right: 0; /* Move the panel into the viewport when open */
+}
+
+/* Add a subtle overlay when the cart panel is open */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none; /* Initially hidden */
+}
+
+.cart-panel.open + .cart-overlay {
+  display: block;
+}
+
+/* Styling for the close cart button */
+.close-cart-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  color: var(--first-color);
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.close-cart-button:hover {
+  color: var(--first-color-alt);
+}
+
+/* Style the final amount in the cart */
+#finalAmount {
+  font-size: 1.2em;
+  margin-top: 1rem;
+  color: var(--first-color);
+}
+
+/* Add some padding and border to each cart item */
+.cart-item-list li {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Apply animation when opening the cart */
+.cart-panel.open .cart-item-list li {
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cart-container {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Style for the cart items */
+.cart-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Style for the buttons */
+button {
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--first-color);
+}
+
+.quantity-buttons {
+  text-align: center;
+}
+
+.quantity-buttons button {
+  font-size: 12px; /* Adjust the font size as needed */
+  padding: 3px 8px; /* Adjust the padding as needed */
+  margin: 0 1px; /* Adjust the margin as needed */
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+}
+
+.quantity-buttons button:hover {
+  background-color: #f0f0f0;
+}
+
+
+.cart-item {
+  margin-bottom: 35px; /* Adjust the margin as needed for spacing between items */
+}
+
+.label {
+  font-weight: bold;
+}
+
+.quantity-buttons {
+  text-align: center;
+  margin-top: 10px; /* Adjust the margin as needed for spacing between quantity and buttons */
+}
