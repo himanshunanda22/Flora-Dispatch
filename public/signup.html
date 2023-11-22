@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <title>Flora Dispatch - Sign Up</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 style="color: var(--first-color)">Sign Up</h2>
+      <form id="signupForm">
+        <label style="color: var(--first-color)" for="newUsername"
+          >Username:</label
+        >
+        <input type="text" id="newUsername" name="newUsername" required />
+
+        <label style="color: var(--first-color)" for="newPassword"
+          >Password:</label
+        >
+        <input type="password" id="newPassword" name="newPassword" required />
+
+        <label style="color: var(--first-color)" for="newEmail">Email:</label>
+        <input type="email" id="newEmail" name="newEmail" required />
+
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="social-login">
+        <p>Or sign up with:</p>
+        <img
+          src="./assets/img/google.png"
+          alt="Google Logo"
+          onclick="loginWithGoogle()" />
+        <img
+          src="./assets/img/facebook.png"
+          alt="Facebook Logo"
+          onclick="loginWithFacebook()" />
+        <img
+          src="./assets/img/instagram.png"
+          alt="Instagram Logo"
+          onclick="loginWithInstagram()" />
+        <p>Flora Dispatch is glad to have you here!</p>
+        <br />
+        <p>Already have an account? <a href="index.html">Log In</a></p>
+      </div>
+    </div>
+    <div class="right-image-s">
+      <img src="./assets/img/right22.jpg" alt="Right Image" />
+    </div>
+    <script src="assets/js/signup.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script>
+      function loginWithGoogle() {
+        alert("Logging in with Google");
+      }
+
+      function loginWithFacebook() {
+        alert("Logging in with Facebook");
+      }
+
+      function loginWithInstagram() {
+        alert("Logging in with Instagram");
+      }
+    </script>
+  </body>
+</html>
