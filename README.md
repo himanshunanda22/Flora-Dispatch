@@ -11,7 +11,7 @@ Adaptive Viewing Modes: Tailor your exploration with ease, seamlessly transition
 # Products Page
 Transition seamlessly to the Products page, where a botanical wonderland unfolds. Discover an array of plants and related products enhanced by innovative features:
 
-Tailored Recommendations: Fine-tune your plant search by adjusting parameters like temperature, humidity, and soil type, receiving personalized recommendations for plants that thrive in your specific environment.
+Tailored Recommendations: Fine-tune your plant search by adjusting parameters like temperature, humidity, and soil type, receiving personalized recommendations for plants that thrive in your specific environment. 
 
 Intuitive Cart Integration: Effortlessly add items to your cart, with the Products page dynamically updating to reflect your selections.
 
