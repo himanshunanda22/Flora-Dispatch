@@ -101,3 +101,7 @@ function updateCartPanel() {
 function goBack() {
   window.history.back();
 }
+
+function ai(){
+  window.location.href = "http://10.14.142.107:8501/";
+}

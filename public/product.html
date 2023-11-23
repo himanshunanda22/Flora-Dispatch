@@ -1,190 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flora Products</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="assets/css/product.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Products</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/product.css" />
 
-  <!--=============== FAVICON ===============-->
-  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 
-  <!--=============== REMIX ICONS ===============-->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-  <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body>
-  
-  <div class="search-container">
-    <div class="search-options">
-      <label for="temperature">Temperature:</label>
-      <select id="temperature">
-        <!-- Add your temperature options here -->
-      </select>
+  <body>
 
-      <label for="humidity">Humidity:</label>
-      <select id="humidity">
-        <!-- Add your humidity options here -->
-      </select>
+    <div class="search-container">
+     
+      <div class="search-options">
+        <a href="#" class="nav__logo">
+          <i class="ri-leaf-line nav__logo-icon"></i> Flora Dispatch
+        </a>
+        <label for="temperature">Temperature:</label>
+        <select id="temperature">
+          <!-- Add your temperature options here -->
+        </select>
 
-      <label for="soil">Soil Type:</label>
-      <select id="soil">
-        <!-- Add your soil options here -->
-      </select>
+        <label for="humidity">Humidity:</label>
+        <select id="humidity">
+          <!-- Add your humidity options here -->
+        </select>
 
-      <button onclick="filterPlants()">Filter Plants</button>
-      <button class="go-back-button" onclick="goBack()">
-        <i class="ri-arrow-left-line"></i> Go Back
-      </button>
-    </div>
-  </div>
+        <label for="soil">Soil Type:</label>
+        <select id="soil">
+          <!-- Add your soil options here -->
+        </select>
 
-  <div class="products-container">
-    <!-- Display products in these sections -->
-    <div id="plants" class="product-section">
-      <!-- Plants content will be displayed here -->
-    </div>
-
-    <div id="fertilizers" class="product-section">
-      <!-- Fertilizers content will be displayed here -->
-    </div>
-
-    <div id="tools" class="product-section">
-      <!-- Tools content will be displayed here -->
-    </div>
-  </div>
-
-  <div id="cart">
-    <!-- Shopping cart items will be displayed here -->
-  </div>
-  </div>
-
-  <!--==================== Side Panel ====================-->
-  <div id="cartPanel" class="cart-panel">
-    <div class="cart-header">
-      <h2 style="text-align: center">
-        <img
-          src="./assets/img/favicon.png"
-          alt="icon logo"
-          style="color: var(--first-color)" />
-        FLORA-CART
-      </h2>
-      <button class="cart-close" onclick="closeCartPanel()">
-        <i class="ri-close-line"></i>
-      </button>
-    </div>
-    <ul id="cartItemList" class="cart-item-list"></ul>
-    <button
-      style="display: flex; justify-content: center; align-items: center"
-      class="button button--flex cart-button"
-      onclick="proceedToCheckout()">
-      Proceed to Checkout
-      <i class="ri-arrow-right-up-line button__icon"></i>
-    </button>
-  </div>
-
-<!--==================== FOOTER ====================-->
-<footer class="footer section">
-  <div class="footer__container container grid">
-    <div class="footer__content">
-      <a href="#" class="footer__logo">
-        <i class="ri-leaf-line footer__logo-icon"></i> Flora Dispatch
-      </a>
-
-      <h3 class="footer__title">
-        Subscribe to our newsletter <br />
-        to stay update
-      </h3>
-
-      <div class="footer__subscribe">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          class="footer__input" />
-
-        <button class="button button--flex footer__button">
-          Subscribe
-          <i class="ri-arrow-right-up-line button__icon"></i>
+        <button onclick="filterPlants()">Filter Plants</button>
+        <button class="go-back-button" onclick="goBack()">
+          <i class="ri-arrow-left-line"></i> Go Back
+        </button>
+        <button class="go-back-button" onclick="ai()">
+          Wanna ask AI?
+          <i class="ri-arrow-right-line"></i> 
         </button>
       </div>
     </div>
 
-    <div class="footer__content">
-      <h3 class="footer__title">Our Address</h3>
+    <div class="products-container">
+      <!-- Display products in these sections -->
+      <div id="plants" class="product-section">
+        <!-- Plants content will be displayed here -->
+      </div>
 
-      <ul class="footer__data">
-        <li class="footer__information">PESU University</li>
-        <li class="footer__information">Electronic City Campus</li>
-        <li class="footer__information">560100</li>
-      </ul>
-    </div>
+      <div id="fertilizers" class="product-section">
+        <!-- Fertilizers content will be displayed here -->
+      </div>
 
-    <div class="footer__content">
-      <h3 class="footer__title">Contact Us</h3>
-
-      <ul class="footer__data">
-        <li class="footer__information">+91 8299716465</li>
-
-        <div class="footer__social">
-          <a href="https://www.facebook.com/" class="footer__social-link">
-            <i class="ri-facebook-fill"></i>
-          </a>
-          <a href="https://www.instagram.com/" class="footer__social-link">
-            <i class="ri-instagram-line"></i>
-          </a>
-          <a href="https://twitter.com/" class="footer__social-link">
-            <i class="ri-twitter-fill"></i>
-          </a>
-        </div>
-      </ul>
-    </div>
-
-    <div class="footer__content">
-      <h3 class="footer__title">We accept all credit cards</h3>
-
-      <div class="footer__cards">
-        <img src="assets/img/card1.png" alt="" class="footer__card" />
-        <img src="assets/img/card2.png" alt="" class="footer__card" />
-        <img src="assets/img/card3.png" alt="" class="footer__card" />
-        <img src="assets/img/card4.png" alt="" class="footer__card" />
+      <div id="tools" class="product-section">
+        <!-- Tools content will be displayed here -->
       </div>
     </div>
-  </div>
 
-  <p class="footer__copy">&#169; Flora.ltd. All rigths reserved</p>
-</footer>
+    <div id="cart">
+      <!-- Shopping cart items will be displayed here -->
+    </div>
+    </div>
 
-  <script src="assets/js/product.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script>
-    // Function to open the side panel
-    function openCartPanel() {
-      document.getElementById("cartPanel").style.width = "250px";
-    }
+    <!--==================== Side Panel ====================-->
+    <div id="cartPanel" class="cart-panel">
+      <div class="cart-header">
+        <h2 style="text-align: center">
+          <img src="./assets/img/favicon.png" alt="icon logo" style="color: var(--first-color)" />
+          FLORA-CART
+        </h2>
+        <button class="cart-close" onclick="closeCartPanel()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+      <ul id="cartItemList" class="cart-item-list"></ul>
+      <button style="display: flex; justify-content: center; align-items: center" class="button button--flex cart-button"
+        onclick="proceedToCheckout()">
+        Proceed to Checkout
+        <i class="ri-arrow-right-up-line button__icon"></i>
+      </button>
+    </div>
 
-    // Function to close the side panel
-    function closeCartPanel() {
-      document.getElementById("cartPanel").style.width = "0";
-    }
-  </script>
-  <!--=============== SCROLL UP ===============-->
-  <a href="#" class="scrollup" id="scroll-up">
-    <i class="ri-arrow-up-fill scrollup__icon"></i>
-  </a>
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <div class="footer__content">
+          <a href="#" class="footer__logo">
+            <i class="ri-leaf-line footer__logo-icon"></i> Flora Dispatch
+          </a>
 
-  <!--=============== SCROLL REVEAL ===============-->
-  <script src="assets/js/scrollreveal.min.js"></script>
+          <h3 class="footer__title">
+            Subscribe to our newsletter <br />
+            to stay update
+          </h3>
 
-  <!--=============== MAIN JS ===============-->
-  <script src="assets/js/main.js"></script>
+          <div class="footer__subscribe">
+            <input type="email" placeholder="Enter your email" class="footer__input" />
 
-  <!--=============== CART JS ===============-->
-  <script src="assets/js/cart.js"></script>
-</body>
+            <button class="button button--flex footer__button">
+              Subscribe
+              <i class="ri-arrow-right-up-line button__icon"></i>
+            </button>
+          </div>
+        </div>
 
-</html>
+        <div class="footer__content">
+          <h3 class="footer__title">Our Address</h3>
+
+          <ul class="footer__data">
+            <li class="footer__information">PESU University</li>
+            <li class="footer__information">Electronic City Campus</li>
+            <li class="footer__information">560100</li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Contact Us</h3>
+
+          <ul class="footer__data">
+            <li class="footer__information">+91 8299716465</li>
+
+            <div class="footer__social">
+              <a href="https://www.facebook.com/" class="footer__social-link">
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a href="https://www.instagram.com/" class="footer__social-link">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="https://twitter.com/" class="footer__social-link">
+                <i class="ri-twitter-fill"></i>
+              </a>
+            </div>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">We accept all credit cards</h3>
+
+          <div class="footer__cards">
+            <img src="assets/img/card1.png" alt="" class="footer__card" />
+            <img src="assets/img/card2.png" alt="" class="footer__card" />
+            <img src="assets/img/card3.png" alt="" class="footer__card" />
+            <img src="assets/img/card4.png" alt="" class="footer__card" />
+          </div>
+        </div>
+      </div>
+
+      <p class="footer__copy">&#169; Flora.ltd. All rigths reserved</p>
+    </footer>
+
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script>
+      // Function to open the side panel
+      function openCartPanel() {
+        document.getElementById("cartPanel").style.width = "250px";
+      }
+
+      // Function to close the side panel
+      function closeCartPanel() {
+        document.getElementById("cartPanel").style.width = "0";
+      }
+    </script>
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+
+  </html>
