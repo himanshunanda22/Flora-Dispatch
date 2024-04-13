@@ -1,4 +1,4 @@
-# Team_10-Flora-Dispatch
+# Flora-Dispatch
 
 ## Flora Dispatch: A Plant-Delivery System
 
